@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import { Control } from './Control';
 
 
 export const metadata = {
@@ -9,9 +10,7 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }) {
-
-
-
+  // 비효율적인 방식 {cache: 'no-store'} 캐시를 저장하지 않겠다.
   const res = await fetch('http://localhost:9999/topics', {cache: 'no-store'});
   const topics = await res.json();
   console.log(topics);
@@ -29,11 +28,7 @@ export default async function RootLayout({ children }) {
           })}
         </ol>
         {children}
-        <ul>
-          <li><Link href="/create">Create</Link></li>
-          <li><Link href="/update/1">Update</Link></li>
-          <li><input type="button" value="delete"></input></li>
-        </ul>
+        <Control />
       </body>
     </html>
   )
