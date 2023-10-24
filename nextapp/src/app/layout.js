@@ -11,9 +11,10 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   // 비효율적인 방식 {cache: 'no-store'} 캐시를 저장하지 않겠다.
-  const res = await fetch('http://localhost:9999/topics', {cache: 'no-store'});
+  console.log('process', process.env.API_URL);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics`, {cache: 'no-store'});
   const topics = await res.json();
-  console.log(topics);
+  
   return (
     <html >
       <body>
