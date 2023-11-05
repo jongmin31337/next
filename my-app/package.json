@@ -1,0 +1,27 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev", // 우리가 개발할때 쓰는 개발용모드
+    "build": "next build", // 서버에 배포한뒤에 프로젝트를 빌드할 때
+    "start": "next start", // 서버에 배포한뒤 빌드 후 실행할때 쓰는 것
+    "lint": "next lint" // 프로젝트 소스코드를 검사할때 (EsLint)
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1"
+  }
+}
