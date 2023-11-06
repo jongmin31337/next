@@ -8,7 +8,7 @@ const nextConfig = {
             }
         ]
     },
-    // a를 b로 데려가기
+    // a를 b로 데려가기 (정적)
     async redirects() {
         return [
             {
