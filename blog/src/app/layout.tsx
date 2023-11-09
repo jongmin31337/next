@@ -26,7 +26,7 @@ export default function RootLayout({
                     <li className='px-2 py-4 text-xl hover:font-bold'><a href="">Tech</a></li>
                 </ul>
 
-                <a href="" className='hidden absolute right-2 text-2xl max-md:block'>
+                <a href="" className='hidden absolute right-2 text-2xl max-md:block max-md:py-2'>
                     <FaBars/>
                 </a>
             </nav>
