@@ -6,10 +6,14 @@ module.exports = {
     extend: {
       width: {
         '1280': '1280px',
+        '1580': '1580px'
       },
     },
     fontFamily: {
       NatoSansMidum: ["NatoSans-Medium"],
+    },
+    backgroundImage: {
+      'banner': "url('/images/banner.jpg')"
     },
     screens: {
       'max-md': {'max': '767px'},
