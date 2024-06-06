@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5", // 컴파일된 JavaScript 코드의 대상 ECMAScript 버전
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext" // 사용할 라이브러리 및 ECMAScript 버전
+    ],
+    "allowJs": true, // JavaScript 파일을 허용할지 여부
+    "skipLibCheck": true, // 라이브러리 검사를 건너뛸지 여부
+    "strict": false, // 엄격한 타입 검사 활성화 여부
+    "forceConsistentCasingInFileNames": true, // 파일 이름의 일관된 대/소문자 사용 여부
+    "noEmit": true, // 컴파일 후 JavaScript 파일을 생성하지 않도록 설정
+    "incremental": true, // 점진적 컴파일 활성화 여부
+    "esModuleInterop": true, // CommonJS 및 ES 모듈 간 상호 운용성 활성화 여부
+    "module": "esnext", // 모듈 코드 생성 방식 (CommonJS, ESNext 등)
+    "moduleResolution": "node", // 모듈 해석 전략 (node, classic 등)
+    "resolveJsonModule": true, // JSON 모듈을 해석할지 여부
+    "isolatedModules": true, // 각 파일이 독립된 모듈로 간주되도록 설정
+    "jsx": "preserve", // JSX 코드 처리 방식 (react, preserve 등)
+    "plugins": [
+      {
+        "name": "next" // 플러그인 설정 (이 경우 Next.js 관련 플러그인 사용)
+      }
+    ]
+  },
+  "include": [  // 포함할 파일 또는 디렉토리 목록
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [ // 제외할 파일 또는 디렉토리 목록
+    "node_modules" 
+  ]
+}
