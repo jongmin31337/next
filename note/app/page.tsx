@@ -1,4 +1,5 @@
 'use client'
+import { useEffect } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 
@@ -13,6 +14,25 @@ export default function Home() {
     frameworkUrl: "/webgl/Test.framework.js",
     codeUrl: "/webgl/Test.wasm",
   });
+
+
+    useEffect(() => {
+    console.log('navigator', navigator);
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js', { scope: '/' })
+        .then((registration) => {
+          console.log(
+            'Service worker registered successfully. Scope:',
+          );
+        })
+        .catch((error) => {
+          console.error('Service worker registration failed:', error);
+        });
+    } else {
+      console.log('Service worker not working')
+    }
+  }, []);
 
 
   return <Unity unityProvider={unityProvider} />;
